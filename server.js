@@ -17,7 +17,7 @@ app.use(methodOverride('_method'));
 app.get('/', (req,res) =>{
     res.render('home')
 })
-app.use('/emplyee', employeeController)
+app.use('/employee', employeeController)
 
 app.get("/*" , (req,res) =>{
     res.render("404");
