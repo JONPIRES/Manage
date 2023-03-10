@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+const employeeController = require('./controllers/employees')
 const methodOverride = require('method-override');
 
 app.set('view engine', 'ejs');
@@ -12,9 +13,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
 
+
 app.get('/', (req,res) =>{
     res.render('home')
 })
+app.use('/emplyee', employeeController)
 
 app.get("/*" , (req,res) =>{
     res.render("404");
