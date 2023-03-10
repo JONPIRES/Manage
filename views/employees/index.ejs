@@ -1,15 +1,15 @@
 <%- include('../partials/headAndNav') %>
 
 <div class="row align-items-center row-cols-auto">
-<% for (let i = 0; i < employees.length; i++) { %>
+<% for (let i = 0; i < emp.length; i++) { %>
     <div class="container text-center">
             <div class="container my-2 py-2">
                 <div class="card" style="width: 18rem;">
-                    <img src= <%= employees[i].img %> class="card-img-top" alt="...">
+                    <img src= <%= emp[i].img %> class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title"><%= employees[i].name %></h5>
-                      <p class="card-text">title: <%= employees[i].type %></p>
-                      <a href="/employees/<%= employees[i]._id %>" class="btn btn-primary">See Employee</a>
+                      <h5 class="card-title"><%= emp[i].name %></h5>
+                      <p class="card-text">title: <%= emp[i].type %></p>
+                      <a href="/employees/<%= emp[i]._id %>" class="btn btn-primary">See Employee</a>
                     </div> 
                   </div>
             </div>
