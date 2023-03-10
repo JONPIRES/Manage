@@ -1,0 +1,29 @@
+<%- include('../partials/headAndNav') %>
+<div class="container">
+    <Form class="form" method="POST" action="/Employee/anything">
+        <div>
+            <label for="name">Enter the Employee name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="image">Enter the url for the image</label>
+            <input type="text" name="img" id="image">
+        </div>
+        <div>
+            <label for="type">What are they birthDate?</label>
+            <input type="text" name="type" id="type">
+        </div>
+        <div>
+            <label for="type">Job Title?</label>
+            <input type="text" name="type" id="type">
+        </div>
+        <input type="submit" value="Submit new employee">
+    </Form>
+
+</div>
+    
+
+
+
+
+<%- include('../partials/footer') %>
