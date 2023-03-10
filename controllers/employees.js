@@ -20,6 +20,34 @@ router.get('/new',(req,res,)=>{
 })
 
 
+router.get('/:id/edit', async(req,res,next) =>{
+    try{
+        const editEmp = await Employee.findById(req.params.id);
+        console.log(editEmp);
+        res.render('employees/edit.ejs', {edit: editEmp})
+    }
+    catch(err){
+        console.log(err);
+        return next()
+    }
+})
+
+
+router.get('/:id', async(req,res,next) =>{
+    try{
+        const showEmp = await Employee.findById(req.params.id);
+        const context = {
+            show: showEmp
+        }
+        res.render('pokemon/show.ejs', context)
+    }
+    catch(err){
+        console.log (err);
+        return next();
+    }
+})
+
+
 router.post('/new', async(req,res,next)=>{
     try{
         let newEmp = await Employee.create(req.body)
