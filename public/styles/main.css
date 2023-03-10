@@ -1,0 +1,64 @@
+html{
+    box-shadow: inset 5px 5px 150px #0813ac, inset -5px -5px 150px #0813ac;
+  }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: rgb(32, 31, 32);
+    text-align: center;
+}
+
+.form{
+    margin: 20px;
+}
+
+img{
+    height:270px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+footer{
+    display: flex;
+    justify-content:center;
+    margin-top: 5rem;
+}
+
+.navbar{
+    box-shadow: inset 5px 5px 30px #0813ac, inset -5px -5px 30px #0813ac;
+}
+
+.dream{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    width: 95%;
+    margin: auto;
+    display: flex;
+}
+
+.form{
+ font-size: 25px;
+ padding: 250px;
+}
+
+@media (max-width:768px){
+    
+    .me{
+        height: auto;
+        width: auto;   
+    }
+
+}
