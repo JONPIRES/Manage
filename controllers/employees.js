@@ -39,7 +39,7 @@ router.get('/:id', async(req,res,next) =>{
         const context = {
             show: showEmp
         }
-        res.render('pokemon/show.ejs', context)
+        res.render('employees/show.ejs', context)
     }
     catch(err){
         console.log (err);
@@ -51,9 +51,20 @@ router.get('/:id', async(req,res,next) =>{
 router.post('/new', async(req,res,next)=>{
     try{
         let newEmp = await Employee.create(req.body)
+        console.log(newEmp)
         res.redirect('/employee')
     }catch(err){
         console.log(err)
+        return next()
+    }
+})
+
+router.put('/:id', async(req,res,next) =>{
+    try{
+        const updateEmp = await Employee.findByIdAndUpdate(req.params.id, req.body)
+        res.redirect('/employee')
+    }catch(err){
+        console.log(err);
         return next()
     }
 })
