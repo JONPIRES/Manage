@@ -1,0 +1,32 @@
+<%- include('../partials/headAndNav') %>
+<div class="container">
+
+   
+    <Form class="form" method="POST" action="/employee/<%= edit._id %>?_method=PUT">
+        <h1> Edit <%= edit.name %></h1>
+        <div>
+            <label for="name">Employee name</label>
+            <input type="text" name="name" id="name" value="<%= edit.name %>">
+        </div>
+        <div>
+            <label for="image">Employee image</label>
+            <input type="text" name="img" id="image" value="<%= edit.img %>">
+        </div>
+        <div>
+            <label for="type">DOB</label>
+            <input type="text" name="type" id="type" value="<%= edit.birthDate %>">
+        </div>
+        <div>
+            <label for="type">Job Title?</label>
+            <input type="text" name="type" id="type" value="<%= edit.title %>">
+        </div>
+        <input type="submit" value="Submit new employee">
+    </Form>
+
+</div>
+    
+
+
+
+
+<%- include('../partials/footer') %>
